@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".All_Activites.EntringPhoneNo_Activity">
+
+
+    <ImageView
+        android:id="@+id/otpLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        android:tint="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mobile" />
+
+    <TextView
+        android:id="@+id/otpunderLogoDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Verify your phone number"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/otpLogo"
+        app:layout_constraintStart_toStartOf="@+id/otpLogo"
+        app:layout_constraintTop_toBottomOf="@+id/otpLogo" />
+
+    <TextView
+        android:id="@+id/otptextDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Chatter will send an SMS message to verify your phone number."
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/otpunderLogoDescription"
+        app:layout_constraintStart_toStartOf="@+id/otpunderLogoDescription"
+        app:layout_constraintTop_toBottomOf="@+id/otpunderLogoDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otptextDescription">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/vActivityUnderLogoDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Enter Your Valid Phone Number Here"
+                android:textColor="@color/pink"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countryCodePiker"
+                    android:layout_width="119dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/textbox_outline"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/etOTPNumberYText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textbox_outline"
+                    android:ems="10"
+                    android:hint="Type your phone number"
+                    android:padding="12dp"
+                    android:phoneNumber="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/BtnOtpContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/pink"
+                android:text="Continue" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
